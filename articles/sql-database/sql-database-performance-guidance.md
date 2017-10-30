@@ -1,6 +1,6 @@
 ---
 title: Azure SQL Database performance tuning guidance | Microsoft Docs
-description: This article can help you determine which service tier to choose for your application. It also recommends ways to tune your application to get the most from Azure SQL Database.
+description: Learn about using recommendations to improve Azure SQL Database query performance.
 services: sql-database
 documentationcenter: na
 author: CarlRabeler
@@ -27,7 +27,7 @@ In you don't have any applicable recommendations, and you still have performance
 2. Tune your application and apply some best practices that can improve performance. 
 3. Tune the database by changing indexes and queries to more efficiently work with data.
 
-These are manual methods because you need to decide what [service tiers](sql-database-service-tiers.md) you would choose or you would need to rewrite application or database code and deply the changes.
+These are manual methods because you need to decide what [service tiers](sql-database-service-tiers.md) you would choose or you would need to rewrite application or database code and deploy the changes.
 
 ## Increasing performance tier of your database
 
@@ -65,7 +65,7 @@ Although Azure SQL Database service tiers are designed to improve performance st
 
 * **Applications that have slow performance because of "chatty" behavior**. Chatty applications make excessive data access operations that are sensitive to network latency. You might need to modify these kinds of applications to reduce the number of data access operations to the SQL database. For example, you might improve application performance by using techniques like batching ad-hoc queries or moving the queries to stored procedures. For more information, see [Batch queries](#batch-queries).
 * **Databases with an intensive workload that can't be supported by an entire single machine**. Databases that exceed the resources of the highest Premium performance level might benefit from scaling out the workload. For more information, see [Cross-database sharding](#cross-database-sharding) and [Functional partitioning](#functional-partitioning).
-* **Applications that have suboptimal queries**. Applications, especially those in the data access layer, that have poorly tuned queries might not benefit from a higher performance level. This includes queries that lack a WHERE clause, have missing indexes, or have outdated statistics. These applications benefit from standard query performance-tuning techniques. For more information, see [Missing indexes](#missing-indexes) and [Query tuning and hinting](#query-tuning-and-hinting).
+* **Applications that have suboptimal queries**. Applications, especially those in the data access layer, that have poorly tuned queries might not benefit from a higher performance level. This includes queries that lack a WHERE clause, have missing indexes, or have outdated statistics. These applications benefit from standard query performance-tuning techniques. For more information, see [Missing indexes](#identifying-and-adding-missing-indexes) and [Query tuning and hinting](#query-tuning-and-hinting).
 * **Applications that have suboptimal data access design**. Applications that have inherent data access concurrency issues, for example deadlocking, might not benefit from a higher performance level. Consider reducing round trips against the Azure SQL Database by caching data on the client side with the Azure Caching service or another caching technology. See [Application tier caching](#application-tier-caching).
 
 ## Tune your database

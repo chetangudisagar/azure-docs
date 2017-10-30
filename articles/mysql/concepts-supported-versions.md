@@ -5,10 +5,8 @@ services: mysql
 author: v-chenyh
 ms.author: v-chenyh
 manager: jhubbard
-editor: jasonh
-ms.assetid:
+editor: jasonwhowell
 ms.service: mysql-database
-ms.tgt_pltfrm: portal
 ms.topic: article
 ms.date: 05/10/2017
 ---
@@ -18,8 +16,8 @@ Azure Database for MySQL has been developed from MySQL Community Edition [MySQL 
 ## MySQL Version 5.6.35
 Refer to the MySQL [documentation] (https://dev.mysql.com/doc/relnotes/mysql/5.6/en/news-5-6-35.html) to learn more about improvements and fixes in MySQL 5.6.35.
 
-## MySQL Version 5.7.17
-Refer to the MySQL [documentation] (https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-17.html) to learn about improvements and fixes in MySQL 5.7.17.
+## MySQL Version 5.7.18
+Refer to the MySQL [documentation] (https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-18.html) to learn about improvements and fixes in MySQL 5.7.18.
 
 ## Managing updates and upgrades
 Azure Database for MySQL automatically manages patching for minor version updates. Currently, in public preview, major version upgrade is not supported. For example, upgrading from MySQL 5.6 to MySQL 5.7 is not supported.
